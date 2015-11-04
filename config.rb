@@ -42,5 +42,5 @@ configure :build do
 end
 
 activate :deploy do |config|
-  config.deploy_method = :git
+  config.method = :git
 end
