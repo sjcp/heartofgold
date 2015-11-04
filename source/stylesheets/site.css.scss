@@ -2,3 +2,23 @@
 @import "compass";
 @import "compass/reset";
 
+@import "grid";
+@import "baseline";
+
+.site {
+  @include container();
+  max-width: 960px;
+}
+
+#{headings()}, p {
+  @include span(12 of 12);
+}
+
+h1 {
+  @include adjust-font-size-to(2em);
+}
+
+h2 {
+  @include adjust-font-size-to(1.5em);
+}
+
