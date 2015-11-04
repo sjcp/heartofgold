@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    action_widget (0.6.1)
+      smart_properties (~> 1.10)
     activesupport (4.2.4)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -110,6 +112,7 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     sass (3.4.19)
+    smart_properties (1.10.0)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -138,7 +141,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  action_widget
   compass
+  erubis
   middleman (~> 3.4)
   middleman-deploy
   middleman-livereload

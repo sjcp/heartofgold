@@ -1,3 +1,13 @@
+require 'bundler/setup'
+require 'action_widget'
+
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+$LOADED_FEATURES.reject! { |f| /^#{File.dirname(__FILE__)}\/lib/ =~ f }
+
+Dir[File.expand_path('../lib/*_widget.rb', __FILE__)].each do |widget|
+  require_relative(widget)
+end
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -40,6 +50,8 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+activate :action_widget
 
 activate :deploy do |config|
   config.method = :git

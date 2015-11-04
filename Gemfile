@@ -9,3 +9,4 @@ gem 'middleman-deploy'
 
 gem 'compass'
 gem 'susy'
+gem 'action_widget'
