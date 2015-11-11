@@ -8,13 +8,17 @@ title: Heart of Gold
   %p All of our items are made gluten-free, with full hearts.
 
   .menu
-    .menu-section
-      %h3 Bagels
-      %p plane jane: plush, plain, simple, and smart
-      %p tempting thyme: fragrant thyme, black pepper and asiago
-      %p zesty berry: berry zest, lemon zest, and more berry zest
-      %p rise and shine: espresso, cinnamon infused, with a brush of honey
-      %p rosemary bliss: fresh rosemary, sea salt, with crisp cheddar
+    = menu_card_widget "Bagels", price: "$6" do |c|
+      = c.item "plane jane" do
+        plush, plain, simple and smart
+      = c.item "tempting thyme" do
+        fragrant thyme, black pepper and asiago
+      = c.item "zesty berry" do
+        berry zest, lemon zest, and more berry zest
+      = c.item "rise and shine" do
+        espresso, cinnamon infused, with a brush of honey
+      = c.item "rosemary bliss" do
+        fresh rosemary, sea salt, with crisp cheddar
 
     .menu-section
       %h3 Shortbread
