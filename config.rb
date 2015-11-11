@@ -51,7 +51,7 @@ configure :build do
   # activate :minify_javascript
 end
 
-activate :action_widget
+activate :action_widget, path: File.expand_path('../lib', __FILE__)
 
 activate :deploy do |config|
   config.method = :git

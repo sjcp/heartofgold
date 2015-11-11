@@ -9,4 +9,4 @@ gem 'middleman-deploy'
 
 gem 'compass'
 gem 'susy'
-gem 'action_widget'
+gem 'action_widget', github: 't6d/action_widget', branch: 'middleman-widget-auto-loading'

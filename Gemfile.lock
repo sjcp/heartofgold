@@ -1,8 +1,14 @@
+GIT
+  remote: git://github.com/t6d/action_widget.git
+  revision: 6d5f9b0328522ce9470f6231f566be28b83cc877
+  branch: middleman-widget-auto-loading
+  specs:
+    action_widget (0.7.0)
+      smart_properties (~> 1.10)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    action_widget (0.6.1)
-      smart_properties (~> 1.10)
     activesupport (4.2.4)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -141,9 +147,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  action_widget
+  action_widget!
   compass
-  erubis
   middleman (~> 3.4)
   middleman-deploy
   middleman-livereload
