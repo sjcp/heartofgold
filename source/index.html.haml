@@ -8,7 +8,7 @@ title: Heart of Gold
   %p All of our items are made gluten-free, with full hearts.
 
   .menu
-    = menu_card_widget "Bagels", price: "$6" do |c|
+    = menu_card_widget "Bagels" do |c|
       = c.item "plane jane" do
         plush, plain, simple and smart
       = c.item "tempting thyme" do
@@ -20,38 +20,38 @@ title: Heart of Gold
       = c.item "rosemary bliss" do
         fresh rosemary, sea salt, with crisp cheddar
 
-    .menu-section
-      %h3 Shortbread
-      %p shortbread millionaire: dipped in salted caramel, coated in chocolate ganache
-      %p warm meadow: infused with lavender florets, lemon zest, and mint
-      %p baby love: mounds of shortbread with folds of milk chocolate
-      %p five o'clock rock: smoky bourbon and cinnamon infused
-      %p snack thyme: fresh thyme, with garlic salt, and parmesan
+    = menu_card_widget "Shortbread" do |c|
+      = c.item "shortbread millionaire" do
+        dipped in salted caramel, coated in chocolate ganache
+      = c.item "warm meadow" do
+        infused with lavender florets, lemon zest, and mint
+      = c.item "baby love" do
+        mounds of shortbread with folds of milk chocolate
+      = c.item "five o'clock rock" do
+        smoky bourbon and cinnamon infused
+      = c.item "snack thyme" do
+        fresh thyme, with garlic salt, and parmesan
 
-    .menu-section
-      %h3 Crackers
-      %p fire roasted red pepper with roasted garlic
-      %p chickpea, fragrant curry and coriander
-      %p lime, rainbow beet, and black pepper
-      %p sweet potato with herbs and cheddar
+    = menu_card_widget "Crackers" do |c|
+      = c.item "fire roasted red pepper with roasted garlic"
+      = c.item "chickpea, fragrant curry and coriander"
+      = c.item "lime, rainbow beet, and black pepper"
+      = c.item "sweet potato with herbs and cheddar"
 
-    .menu-section
-      %h3 Muffins
-      %p carrot
-      %p apple fritter
-      %p red berries
+    = menu_card_widget "Muffins" do |c|
+      = c.item "carrot"
+      = c.item "apple fritter"
+      = c.item "red berries"
 
-    .menu-section
-      %h3 Cupcake
-      %p celebration
-      %p red velour
-      %p fudge
+    = menu_card_widget "Cupcake" do |c|
+      = c.item "celebration"
+      = c.item "red velour"
+      = c.item "fudge"
 
-    .menu-section
-      %h3 Scones
-      %p salted butter
-      %p vanilla bean
-      %p lemon berry
+    = menu_card_widget "Scones" do |c|
+      = c.item "salted butter"
+      = c.item "vanilla bean"
+      = c.item "lemon berry"
 
 = section_widget "Stay" do
   %p Stay a while in our café!  Food brings people together, so stay a while and make a new friend!

@@ -4,13 +4,14 @@ class MenuCardWidget < ActionWidget::Base
     property :description
 
     def render
-      span(title, class: 'title') +
-        span(description, class: 'description')
+      content = span(title, class: 'title')
+      content << span(description, class: 'description') unless description.nil?
+      content
     end
   end
 
-  def self.render(view, title, price, *args, **attrs, &block)
-    new(view, title: title, price: price, **attrs).render(*args, &block)
+  def self.render(view, title, *args, **attrs, &block)
+    new(view, title: title, **attrs).render(*args, &block)
   end
 
   property :title, required: true
@@ -18,12 +19,13 @@ class MenuCardWidget < ActionWidget::Base
 
   def render(&menu_items)
     div(class: 'menu-card') do
-      content_tag(:h3, title) +
+      concat content_tag(:h3, title) +
         content_tag(:ul, capture(self, &menu_items), class: 'menu-items')
     end
   end
 
   def item(title, &description)
-    content_tag(:li, Item.new(view, title: title, description: capture(&description)).render, class: 'menu-item')
+    description &&= capture(&description)
+    content_tag(:li, Item.new(view, title: title, description: description).render, class: 'menu-item')
   end
 end
