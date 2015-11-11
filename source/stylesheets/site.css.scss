@@ -16,32 +16,68 @@
 // Element styles
 //
 
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.4em;
+}
+
+#{headings()} {
+  font-family: serif;
+  line-height: 1.5em;
+}
+
 h1 {
-  @include adjust-font-size-to(2em);
+  font-size: 3em;
 }
 
 h2 {
-  @include adjust-font-size-to(1.5em);
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+h3 {
+  font-size: 1.25em;
 }
 
 //
 // Class styles
 //
 
-.container {
-  @include container(60em);
+.page-section {
+  .container {
+    max-width: 80ex;
+    min-width: 320px;
+    margin: 0 auto;
+  }
 
-  > #{headings()}, > p {
-    @include span(12 of 12);
+  &.hero {
+    background-color: #eee;
+    height: 400px;
+    text-align: center;
+
+    .container {
+      @include display-flex();
+      @include align-items(center);
+      height: 100%;
+
+      h1 {
+        @include align-self(center);
+        margin: 0 auto;
+      }
+    }
   }
 }
 
-.hero {
+.menu-card {
   background-color: #eee;
-  height: 400px;
-  text-align: center;
+  padding: 1em;
 
-  > * {
-    @include vertically-center();
+  > .title
+
+  .menu-item {
+    > .title:after {
+      content: ": ";
+    }
   }
 }
