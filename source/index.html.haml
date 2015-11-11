@@ -2,67 +2,77 @@
 title: Heart of Gold
 ---
 
-.section.hero
-  .container
-    %h1 Heart of Gold
+= section_widget "Heart of Gold", class: 'hero', tag: :h1
 
-%h2 Menu
-%p All of our items are made gluten-free, with full hearts.
+= section_widget "Menu" do
+  %p All of our items are made gluten-free, with full hearts.
 
-%h3 Bagels
-%p plane jane
-%p bagel 2
-%p bagel 3:
-%p rise and shine: espresso, cinnamon infused, with a brush of honey
-%p rosemary bliss: fresh rosemary
+  .menu
+    .menu-section
+      %h3 Bagels
+      %p plane jane
+      %p bagel 2
+      %p bagel 3:
+      %p rise and shine: espresso, cinnamon infused, with a brush of honey
+      %p rosemary bliss: fresh rosemary
 
-%h3 Shortbread
-%p shortbread millionaire: dipped in salted caramel, coated in chocolate ganache
-%p warm meadow: infused with lavender, lemon and mint
-%p baby love: folds of milk chocolate
-%p five o'clock rock: bourbon and cinnamon infused
-%p snack thyme: thyme, garlic and parmesan
+    .menu-section
+      %h3 Shortbread
+      %p shortbread millionaire: dipped in salted caramel, coated in chocolate ganache
+      %p warm meadow: infused with lavender, lemon and mint
+      %p baby love: folds of milk chocolate
+      %p five o'clock rock: bourbon and cinnamon infused
+      %p snack thyme: thyme, garlic and parmesan
 
-%h3 Crackers
-%p fire roasted red pepper with roasted garlic
-%p chickpea, curry and coriander
-%p lime, beet, and black pepper
-%p sweet potato with herbs and cheddar
+    .menu-section
+      %h3 Crackers
+      %p fire roasted red pepper with roasted garlic
+      %p chickpea, curry and coriander
+      %p lime, beet, and black pepper
+      %p sweet potato with herbs and cheddar
 
-%h3 Muffins
-%p carrot
-%p apple fritter
-%p red berries
+    .menu-section
+      %h3 Muffins
+      %p carrot
+      %p apple fritter
+      %p red berries
 
-%h3 Cupcake
-%p celebration
-%p red velour
-%p fudge
+    .menu-section
+      %h3 Cupcake
+      %p celebration
+      %p red velour
+      %p fudge
 
-%h3 Scones
-%p salted butter
-%p vanilla bean
-%p lemon berry
+    .menu-section
+      %h3 Scones
+      %p salted butter
+      %p vanilla bean
+      %p lemon berry
 
-%h2 Stay
-%p Stay a while in our café! Our philosophy is that food brings people together, so stay a while and make a new friend!
+= section_widget "Stay" do
+  %p Stay a while in our café! Our philosophy is that food brings people together, so stay a while and make a new friend!
 
-%h3 This Month’s Specials:
-%h3 Bagel
-%h3 Shortbread
-%h3 Muffin
-%h3 Cracker
-%h3 Feature Coffee
-%p Catering: reach us at
-%p See all of our offerings under the Menu
 
-%h2 Play
-%p Play away in our kitchen! Our food philosophy is that we should experiment, learn and share with others.
-%p We host Social Capital events where we have an Ottawa gem coming in to teach and share their special insights and favourite recipes with you.  Join us as an individual or as a group in the kitchen.
-%p You are also free to explore the kitchen on your own, or with a group and create something of your own.
+= section_widget "This Month’s Specials" do
+  %h3 Bagel
+  %h3 Shortbread
+  %h3 Muffin
+  %h3 Cracker
+  %h3 Feature Coffee
 
-%h2 Our Story
-%p Our name is inspired by the wonderful people we continue to meet everyday, who truly have pure gold in their hearts and to be kind and enjoy a delightful foods. In addition to being a Neil Young favourite
+= section_widget "Catering" do
+  %p See all of our offerings under the menu
 
-%h2 Find us
-%h2 Connect with us
+= section_widget "Play" do
+  %p Play away in our kitchen! Our food philosophy is that we should experiment, learn and share with others.
+  %p We host Social Capital events where we have an Ottawa gem coming in to teach and share their special insights and favourite recipes with you.  Join us as an individual or as a group in the kitchen.
+  %p You are also free to explore the kitchen on your own, or with a group and create something of your own.
+
+= section_widget "Our Story" do
+  %p Our name is inspired by the wonderful people we continue to meet everyday, who truly have pure gold in their hearts and to be kind and enjoy a delightful foods. In addition to being a Neil Young favourite
+
+= section_widget "Connect with us" do
+  &nbsp;
+
+= section_widget "Find us" do
+  &nbsp;

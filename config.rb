@@ -1,11 +1,18 @@
 require 'bundler/setup'
 require 'action_widget'
 
-$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
-$LOADED_FEATURES.reject! { |f| /^#{File.dirname(__FILE__)}\/lib/ =~ f }
+class ActionWidget::Base
+  def content_tag(*args, **options, &block)
+    options[:class] &&=
+      case classes = options[:class]
+      when Array
+        classes.flatten.compact.join(" ")
+      else
+        classes
+      end
 
-Dir[File.expand_path('../lib/*_widget.rb', __FILE__)].each do |widget|
-  require_relative(widget)
+    view.content_tag(*args, **options, &block)
+  end
 end
 
 ###
