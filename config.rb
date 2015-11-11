@@ -13,6 +13,14 @@ class ActionWidget::Base
 
     view.content_tag(*args, **options, &block)
   end
+
+  def span(*args, &block)
+    content_tag(:span, *args, &block)
+  end
+
+  def div(*args, &block)
+    content_tag(:div, *args, &block)
+  end
 end
 
 ###
