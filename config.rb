@@ -47,7 +47,7 @@ page '/*.txt', layout: false
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload, host: '0.0.0.0'
+  # activate :livereload, host: '0.0.0.0'
 end
 
 # Methods defined in the helpers block are available in templates
