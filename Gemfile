@@ -8,4 +8,4 @@ gem 'middleman-livereload'
 gem 'middleman-deploy'
 
 gem 'compass'
-gem 'action_widget', github: 't6d/action_widget', branch: 'middleman-widget-auto-loading'
+gem 'action_widget', '~> 0.8.0'
