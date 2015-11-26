@@ -5,6 +5,7 @@ class MenuCardWidget < ActionWidget::Base
 
     def render
       content = span(title, class: 'title')
+      content << " "
       content << span(description, class: 'description') unless description.nil?
       content
     end
